@@ -46,6 +46,11 @@ console.log(result);
 
  */
 //For Loop
+/*
+Là gì: Vòng lặp cơ bản nhất, chạy theo chỉ số (index) i.
+Khi nào dùng: Khi bạn cần sử dụng chỉ số i 
+(ví dụ: để biết vị trí phần tử, hoặc sửa trực tiếp phần tử trong mảng gốc).
+*/ 
 for(var i = 1; i <= 1000; i++){
     console.log(i);
 }
@@ -61,6 +66,11 @@ for(let i = 0; i < arrayLength; i++){
 }
 
 //For/in Loop
+/*
+Là gì: Vòng lặp dùng để duyệt qua các tên thuộc tính (keys) của một Object.
+Khi nào dùng: Khi bạn muốn xem trong một Object có những thông tin gì.
+Lưu ý: Không nên dùng cho Mảng. Vì nó duyệt theo thứ tự không đảm bảo và chậm hơn for...of.
+*/
 function run(object) {
     let results = [];
     for (let key in object){
@@ -78,6 +88,10 @@ console.log(run({ name: 'Nguyen Van A', age: 16 }));
 // ]
 
 //For/of Loop
+/*
+Là gì: Phiên bản nâng cấp, gọn gàng hơn. Nó lấy trực tiếp giá trị (value) ra để dùng.
+Khi nào dùng: Ưu tiên số 1 khi duyệt mảng mà không quan tâm đến vị trí i. Code sẽ rất sạch.
+*/
 let languages = [
     'javascript',
     'php',
@@ -86,8 +100,13 @@ let languages = [
 for(let value of languages){
     console.log(value); 
 }
+//output: javascript, php, python
 
 //While Loop
+/*
+Cơ chế: Nhìn điều kiện -> Nếu đúng thì mới chạy -> Chạy xong quay lại nhìn điều kiện.
+Đặc điểm: Có thể không chạy lần nào nếu điều kiện sai ngay từ đầu.
+*/
 let myArray1 = [
     'javascript', 
     'php',
@@ -100,6 +119,10 @@ while(i < myArray1.length){
 }
 
 //Do/while Loop
+/*
+Cơ chế: Chạy code 1 lần trước -> Sau đó mới nhìn điều kiện -> Nếu đúng thì chạy tiếp.
+Đặc điểm: Chắc chắn chạy ít nhất 1 lần dù điều kiện có sai.
+*/
 var i = 0;
 var isSuccess = false;
 do{
@@ -114,6 +137,10 @@ do{
 }while(!isSuccess && i <= 3);
 
 //Break & Continue in Loop
+/*
+Break: Dừng vòng lặp ngay lập tức khi điều kiện đúng.
+Continue: Bỏ qua các dòng code phía sau và chuyển sang lần lặp tiếp theo.
+*/
 for (let i = 1; i <= 10; i++){
 
     if(i % 2 !== 0){
@@ -137,4 +164,5 @@ for (let i = 1; i <= 10; i++){
 //VD
 let array = ['a', 'b', 'c', 'd', 'a', 'a', 'c'];
 
-console.log(new Set(array ))
+console.log(new Set(array));
+//output: a, b, c, d (không lặp lại phần tử)

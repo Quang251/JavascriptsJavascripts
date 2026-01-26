@@ -168,4 +168,22 @@ console.log(languages.unshift(''));// giống push nhưng giờ là đầu mản
 languages.splice(1, 2)// 1 là đặt con chỏ vào phần tử 1(PHP)sau đó 2 sẽ là xóa 2 phần tử kể từ phần tử 1 
 languages.splice(1, 0, 'x')// chèn trước thằng phần tử 1, 0 là không xóa thằng nào hoặc có thể 1 là để thay thế
 console.log(languages.concat(languages2))// gộp 2 array lai và trước concat sẽ là mảng gốc(ở đây là languages
+console.log(languages.reverse())// đảo ngược mảng
 console.log(languages.slice(1, 2))//cắt từ vị trí phần từ 1 đến đầu vị trí phần tử 2
+
+
+// dùng typeof sẽ không kiểm tra được array hay ko nên dùng Array.isArray()
+console.log(Array.isArray(languages));//kiểm tra xem hàm có phải array hay ko
+// kiểm tra độ dài của array
+console.log(languages.length);
+// lấy từng phần tử trong array
+console.log(languages[0]);
+console.log(languages[1]);
+console.log(languages[2]);
+console.log(languages[3]);
+console.log(languages[4]);
+console.log(languages[5]);
+console.log(languages[6]);
+console.log(languages[7]);
+console.log(languages[8]);
+console.log(languages[9]);

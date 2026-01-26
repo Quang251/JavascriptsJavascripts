@@ -1,0 +1,3 @@
+function getPrimes(min, max) {
+
+}

@@ -164,5 +164,21 @@ for (let i = 1; i <= 10; i++){
 //VD
 let array = ['a', 'b', 'c', 'd', 'a', 'a', 'c'];
 
-console.log(new Set(array));
+console.log(new Set(array)); 
 //output: a, b, c, d (không lặp lại phần tử)
+
+
+//1. Xác định được điểm dừng
+//2. Logic handle => Tạo ra điểm dừng
+function deQuy(num){
+      if(num < 0){
+        //Dừng
+        //...
+        return;
+      }
+     
+      deQuy();
+}
+deQuy(10);
+//A -> loop -> CPU
+//A -> deQuy -> Ram

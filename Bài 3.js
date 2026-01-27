@@ -12,7 +12,7 @@ function countFrequency(arr){
         let element = arr[i];
         
         if (counts[element]){
-            counts[element] = counts[element] + 1 ;
+            counts[element]++ ;
         }
         else{
             
@@ -22,16 +22,17 @@ function countFrequency(arr){
     console.log(counts);
    
     const arr2 = [];
-    for (let i = 0; i < counts.length; i++){
-        let value = counts[i];
-        console.log(counts[i])
+    for (let key of counts){
+        let value = counts[key];
+        console.log(value);
         if (value % 2 === 0){
-            arr2.push(value)
+            let text = `${key}: ${value}`; 
+            arr2.push(text);
         }       
     }
     return arr2
 }
-console.log()
+console.log(countFrequency(arr))
 
 
 

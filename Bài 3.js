@@ -7,32 +7,30 @@ Ví dụ: countFrequency(['a', 'b', 'a', 'c', 'b', 'a']) => { a: 3, b: 2, c: 1 }
 
 
 function countFrequency(arr){
-    const counts = [];
+    // Bước 1: Đếm tần suất xuất hiện của mỗi phần tử
+    const counts = {}; 
     for (let i = 0; i < arr.length; i++){
-        let element = arr[i];
-        
+        let element = arr[i];  
         if (counts[element]){
             counts[element]++ ;
         }
         else{
-            
             counts[element] = 1;
         }
     }
-    console.log(counts);
    
-    const arr2 = [];
-    for (let key of counts){
+    // Bước 2: Lọc chỉ lấy các giá trị chẵn
+    const result = {}; 
+    for (let key in counts){
         let value = counts[key];
-        console.log(value);
         if (value % 2 === 0){
-            let text = `${key}: ${value}`; 
-            arr2.push(text);
+            result[key] = value;
         }       
     }
-    return arr2
+    return result;
 }
-console.log(countFrequency(arr))
+//arr = ['a', 'b', 'a', 'c', 'b', 'a'];
+console.log(countFrequency(arr));
 
 
 

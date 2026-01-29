@@ -7,17 +7,17 @@ Ví dụ: formatName(" nguYen  vAn aN ") => "Nguyen Van An"
 
 //Tạo hàm
 function formatName(str) {
-    let cleanStr = str.trim().toLowerCase();
-    let words = cleanStr.split(/\s+/);
+    const cleanStr = str.trim();  
+    const words = cleanStr.split(/\s+/);
     let result = [];
-    for(let i = 0; i < words.length; i++){
-        let word = words[i];
-        if(word.length > 0){
-            let newWord = word[0].toUpperCase() + word.slice(1);
-            result.push(newWord);
+    for(let i = 0; i < words.length; i += 2){
+        if(words.length > 0){
+            let newWord =  words.slice(i, i + 2);
+            result.push(newWord.join(" "));
+            // console.log(newWord);    
         }
     }
-    return result.join(" ");
+    return result.join() + ".";
 }
 console.log(result);
 

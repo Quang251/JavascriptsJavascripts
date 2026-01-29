@@ -18,12 +18,10 @@ function isPrime(n){
 function getPrimes(min, max){
     let result = [];
     for(let i = min; i <= max; i++){
-        if(isPrime(i)){
+        if(!isPrime(i)){
             result.push(i);
         }
-    }
-
-    
-    console.log(result);
-    return result;
+    }  
+    return result.join(",");
 }
+console.log(result);

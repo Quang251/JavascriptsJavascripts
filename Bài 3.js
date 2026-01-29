@@ -7,7 +7,6 @@ Ví dụ: countFrequency(['a', 'b', 'a', 'c', 'b', 'a']) => { a: 3, b: 2, c: 1 }
 
 
 function countFrequency(arr){
-    // Bước 1: Đếm tần suất xuất hiện của mỗi phần tử
     const counts = {}; 
     for (let i = 0; i < arr.length; i++){
         let element = arr[i];  
@@ -19,7 +18,7 @@ function countFrequency(arr){
         }
     }
    
-    // Bước 2: Lọc chỉ lấy các giá trị chẵn
+
     const result = {}; 
     for (let key in counts){
         let value = counts[key];

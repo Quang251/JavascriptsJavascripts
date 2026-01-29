@@ -26,7 +26,15 @@ function findSecondLargest(arr) {
             }
         }
     }
-    console.log('Số lớn thứ hai:', secondLargest);
-    return secondLargest;
+    let thirdLargest = null;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] < secondLargest) {
+            if (thirdLargest === null || arr[i] > thirdLargest) {
+                thirdLargest = arr[i];
+            }
+        }
+    }
+    console.log('Số lớn thứ ba:', thirdLargest);
+    return thirdLargest;
 }
 //console.log('Kết quả:', findSecondLargest([5, 12, 10, 12, 9]));

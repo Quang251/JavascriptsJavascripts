@@ -22,6 +22,4 @@ function totalCart(cart){
         console.log('Mua thêm để được giảm giá');
     }
     console.log(`Giá cuối ${finalPrice}`)
-    
-    
 }

@@ -13,17 +13,40 @@ const employees = [
 ];
 
 function groupByDept(list) {
-    const result = {};
+    const group = {};
     for (let i = 0; i < list.length; i++) {
         let emp = list[i];
         let department = emp.dept;
         if (!group[department]){
             group[department] = [];
             
-        }else{
-            group[department].push(emp);
         }
+        group[department].push(emp);
+        
     }
-    return result;
+    return group;
 }
 console.log(groupByDept(employees));
+
+// const groups =[
+//     {name: 'A', dept: 'IT'},
+//     {name: 'B', dept: 'HR'},
+//     {name: 'C', dept: 'IT'},
+//     {name: 'D', dept: 'HR'}
+// ];
+
+// function groupByDept(list){
+    //     let result = [];
+    //     for (let i = 0; i < list.length; i++){
+        //     let emp = list[i];
+        //     let department = emp.dept
+//         if(result[department]){
+
+//         }else
+//     }
+// }
+
+
+
+
+

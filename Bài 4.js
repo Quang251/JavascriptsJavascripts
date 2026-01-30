@@ -4,37 +4,37 @@ Viết hàm tìm số lớn thứ hai trong mảng. Lưu ý: Không sử dụng 
 Ví dụ: findSecondLargest([5, 12, 10, 12, 9]) => 10
 */
 
-function findSecondLargest(arr) {
-    console.log('Mảng ban đầu:', arr);
-    if (arr.length < 2) {
-        console.log('Mảng phải có ít nhất 2 phần tử');
-        return null;
+// 
+function findSecondLargest(arr){
+    if(arr.length < 2){
+        console.log('mảng phải lớn hơn 2 phần tử');
+        console.log('QUang');
+               
+        return null
     }
     let largest = arr[0];
-
-    for (let i = 1; i < arr.length; i++) {
-        if (arr[i] > largest) {
-            largest = arr[i];
+    for(let i = 1; i < arr.length; i++){
+        if(arr[i] > largest){
+            largest = arr[i];     
         }
     }
-
+    // let maximum = Math.max(...arr)
+    let both = []
+    both.push(largest)
+    console.log(both);
+    
     let secondLargest = null;
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] < largest) {
-            if (secondLargest === null || arr[i] > secondLargest) {
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i] < both[0]){
+            if(secondLargest === null || arr[i] > secondLargest){
                 secondLargest = arr[i];
             }
         }
+        
+       
     }
-    let thirdLargest = null;
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] < secondLargest) {
-            if (thirdLargest === null || arr[i] > thirdLargest) {
-                thirdLargest = arr[i];
-            }
-        }
-    }
-    console.log('Số lớn thứ ba:', thirdLargest);
-    return thirdLargest;
+    both.push(secondLargest)
+    console.log(both);
 }
-//console.log('Kết quả:', findSecondLargest([5, 12, 10, 12, 9]));
+
+

@@ -31,6 +31,24 @@ function countFrequency(arr){
 //arr = ['a', 'b', 'a', 'c', 'b', 'a'];
 console.log(countFrequency(arr));
 
+// const arr = ['a', 'b', 'a', 'c', 'b', 'a']
+// function countFrequency(arr){
+//     let counts = {};
+//     for (let i = 0; i < arr.length; i++){
+//         let element = arr[i];
+//         if (counts[element]){
+//             counts[element]++;
+//         }else{
+//             counts[element] = 1;
+//         }
+//     }
+//     return counts;  
+// }
+// const counts = countFrequency(arr)
+// const filterObject = Object.entries(counts)
+//     .filter(([key, value]) => value % 2 !== 0)
+//     .reduce((acc, [key, value]) => ({ ...acc, [key]: value }), {}) 
+// console.log(filterObject)
 
 
 

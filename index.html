@@ -3,9 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <title>React JS in HTML</title>
     
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <h1>Bài toán Add React to Website</h1>
+    
+    <div id="root"></div>
+
+    <script type="text/babel">
+        
+        // --- LOGIC BÀI TOÁN CỦA BẠN ---
+        function getSum(arr, k){
+            let newSum = []  
+            let num = new Set()
+
+            for(let i = 0; i < arr.length; i++){
+                let n = arr[i]
+                let m = k - n;
+
+                if(num.has(m)){ 
+                    newSum.push([m,n])       
+                }  
+                num.add(n) // Nhớ fix: add n chứ không phải m
+            }
+            return newSum 
+        }
+
+        // --- COMPONENT REACT ---
+        function App() {
+            const array = [0, 1, 2, 3, 4, 5, 6]
+            const k = 6;
+            const ketQua = getSum(array, k);
+
+            return (
+                <div style={{ border: '1px solid black', padding: '10px', marginTop: '20px' }}>
+                    <h3>Kết quả tính toán:</h3>
+                    <ul>
+                        {ketQua.map((item, index) => (
+                            <li key={index}>
+                                Cặp số: <strong>{item[0]}</strong> và <strong>{item[1]}</strong>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            )
+        }
+
+        // --- RENDER (Đưa React vào thẻ div id="root") ---
+        const rootElement = document.getElementById('root');
+        ReactDOM.render(<App />, rootElement);
+
+    </script>
 </body>
 </html>

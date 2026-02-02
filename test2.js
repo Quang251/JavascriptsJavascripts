@@ -1,15 +1,10 @@
-function generateSlug(str) {
-    const cleanedStr = str.trim().toLowerCase().replace(' ', '-')
-    const words = cleanedStr.replace(/[^a-z0-9]/g, '')
-    let result =[]
-    for(let i = 0; i < words.length; i++){
-        if(words.length > 0){
-            let newSen = words.slice[0];
-            result.push(newSen)
-            console.log(newSen);
-            
-        }
-    }
-    return result.join('-')
+function generateSlug(str) {ng
+    let slug = str.trim().toLowerCase();
+    slug = slug.replace(/\s+/g, '-');
+    slug = slug.replace(/[^a-z0-9-]/g, '');
+    slug = slug.replace(/-+/g, '-');
+    slug = slug.replace(/^-+|-+$/g, '');
+    
+    return slug;
 }
-console.log(result);
+console.log(generateSlug(" Javascript Cho Người Mới Bắt Đầu! "));

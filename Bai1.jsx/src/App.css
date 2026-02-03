@@ -1,0 +1,23 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+#core-concept ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 2rem;
+  
+}
+
+
+#core-concept ul li img {
+  width: 200px;
+  height: 200px;
+  border-radius: 8px;
+}
+
